@@ -8,13 +8,13 @@ const app=express()
 app.use(express.json())
 app.use(cors(
     {
-        origin: ["https://deploy-mern-frontend.vercel.app"],
+        origin: ["https://login-register-mern-frontend.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
 ));
 
-mongoose.connect("mongodb://127.0.0.1:27017/employee");
+mongoose.connect("mongodb+srv://tejaspachgade2315:CLDsZ0pbIlpJnWA5@cluster0.mq5d19b.mongodb.net/testDb?retryWrites=true&w=majority");
 app.get("/", (req, res) => {
     res.json("Hello");
 })
